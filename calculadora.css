@@ -1,0 +1,101 @@
+*{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: large;
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background:rgb(121, 255, 121);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.calculator{
+    border-radius: 15%;
+    background-color: aliceblue;
+    height: 650px;
+    width: 500px;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    display: flex;
+    justify-content: center;
+}
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#display{
+    margin-top: 3rem;
+    text-align: end;
+    font-size: 1rem;
+    height: 50px;
+    width: 420px;
+    background-color: transparent;
+    border: none;
+}
+.displaySup{
+    opacity: 0.7;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+#display:focus-visible{
+    outline: none;
+}
+.simbolos{    
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+}
+.math{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 2px 2px gray;
+    border-radius: 15%;
+    background-color: rgb(7, 252, 137);
+    width: 60px;
+    height: 60px;
+}
+.numbers{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 2px 2px 0 gray;
+    border-radius: 15%;
+    background-color: bisque;
+    margin: 1rem;
+    width: 83px;
+    height: 83px;
+}
+.zero{
+    display: flex;
+    align-self: stretch;
+}
+.inferior{
+    margin: 2rem 0px 0px 0px;
+    display: flex;
+    flex-direction: row-reverse;
+}
+.teclas{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.numbers:hover{
+    opacity: .6;;
+}
+.numbers:active{
+    box-shadow: inset 2px 2px 5px;
+}
+
+.math:hover{
+    opacity: .6;;
+}
+.math:active{
+    box-shadow: inset 2px 2px 5px;
+}

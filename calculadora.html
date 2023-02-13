@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" type="text/css" href="calculatora.css" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculadora</title>
+</head>
+<body>
+    <div class="calculator">
+        <section>
+
+            <div class="superior">
+                    
+                    <input type="text" id="display" onchange="calculo()" >
+            </div>
+        <div class="inferior">
+
+                <div class="simbolos">
+                    <div class="math" onclick="digitar('+')">+</div>
+                    <div class="math" onclick="digitar('-')">-</div>
+                    <div class="math" onclick="digitar('*')">x</div>
+                    <div class="math" onclick="digitar('/')">/</div>
+                    <div class="math" >AC</div>
+                    <div class="math" onclick="apaga()">C</div>
+                </div>
+
+                <div class="teclas">
+                    <div class="numbers" onclick="digitar('1')">1</div>
+                    <div class="numbers" onclick="digitar('2')">2</div>
+                    <div class="numbers" onclick="digitar('3')">3</div>
+                    <div class="numbers" onclick="digitar('4')">4</div>
+                    <div class="numbers" onclick="digitar('5')">5</div>
+                    <div class="numbers" onclick="digitar('6')">6</div>
+                    <div class="numbers" onclick="digitar('7')">7</div>
+                    <div class="numbers" onclick="digitar('8')">8</div>
+                    <div class="numbers" onclick="digitar('9')">9</div>
+                    <div class="numbers" onclick="digitar('0')">0</div>
+                    <div class="numbers" onclick="digitar(',')">,</div>
+                    <div class="numbers" onclick="calculo()">=</div>
+                </div>
+                
+        </div>
+    </section>
+    </div>
+
+<script>
+    function digitar(num){
+        document.getElementById('display').value+=num
+    }
+    function apaga(){
+        var resultado=document.getElementById('display').value
+        document.getElementById('display').value=resultado.substring(0,resultado.length-1)       
+    }
+    function calculo(){
+        resultado=document.getElementById('display').value
+        document.getElementById('display').value= eval(resultado);
+    }
+    function calculoCima(){
+        resultado=document.getElementById('display').value
+        const superior=document.getElementsByClassName('superior')
+        superior.document.createElement("p").innerText=resultado.classList='displaySup'
+
+    }
+    
+</script>
+
+</body>
+</html>
